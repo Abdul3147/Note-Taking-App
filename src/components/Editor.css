@@ -1,23 +1,30 @@
+
 /* Default CSS for initial page load */
 body {
-    background-color: white; /* Default background color */
-    color: rgb(5, 5, 5); /* Default text color */
+    background-color: white;
+    /* Default background color */
+    color: rgb(5, 5, 5);
+    /* Default text color */
 }
 
 /* CSS Variables for light and dark mode */
 :root {
     --header-bg: #282c34;
-    --text-color: rgb(5, 5, 5); /* Dark text for light mode */
+    --text-color: rgb(5, 5, 5);
+    /* Dark text for light mode */
 }
 
 body.light-mode {
-    --header-bg: #f8f9fa; /* Light background for light mode */
-    --text-color: rgb(5, 5, 5); /* Dark text for light mode */
+    --header-bg: #f8f9fa;
+    /* Light background for light mode */
+    --text-color: rgb(5, 5, 5);
+    /* Dark text for light mode */
 }
 
 body.dark-mode {
     --header-bg: #1e1e1e;
-    --text-color: white; /* Light text for dark mode */
+    --text-color: white;
+    /* Light text for dark mode */
 }
 
 body.light-mode {
@@ -40,12 +47,15 @@ body.dark-mode {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: flex-end; /* Align items to the right */
-    align-items: center; /* Align items in the center vertically */
+    justify-content: flex-end;
+    /* Align items to the right */
+    align-items: center;
+    /* Align items in the center vertically */
 }
 
 .App-header nav ul li {
-    margin-right: 10px; /* Reduce space between buttons */
+    margin-right: 10px;
+    /* Reduce space between buttons */
 }
 
 .nav-button {
@@ -54,11 +64,13 @@ body.dark-mode {
     font-size: 16px;
     padding: 10px 15px;
     border: none;
-    background: none; /* Remove background to eliminate box */
+    background: none;
+    /* Remove background to eliminate box */
     cursor: pointer;
     transition: color 0.3s;
 }
 
 .nav-button:hover {
-    color: #61dafb; /* Change color on hover */
+    color: #61dafb;
+    /* Change color on hover */
 }

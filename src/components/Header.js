@@ -1,49 +1,74 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import './Header.css'; // Import CSS for styling
+
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom"; // Use NavLink for active route styling
+import "./Header.css"; // Import CSS for styling
 
 const Header = () => {
-    const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
-    useEffect(() => {
-        // Load dark mode setting from localStorage
-        const savedMode = localStorage.getItem('darkMode') === 'true';
-        setDarkMode(savedMode);
-        document.body.classList.toggle('dark-mode', savedMode);
-    }, []);
+  useEffect(() => {
+    // Load dark mode setting from localStorage
+    const savedMode = localStorage.getItem("darkMode") === "true";
+    setDarkMode(savedMode);
+    document.body.classList.toggle("dark-mode", savedMode);
+  }, []);
 
-    const toggleDarkMode = () => {
-        // Toggle dark mode and save to localStorage
-        const newMode = !darkMode;
-        setDarkMode(newMode);
-        localStorage.setItem('darkMode', newMode);
-        document.body.classList.toggle('dark-mode', newMode);
-    };
+  const toggleDarkMode = () => {
+    // Toggle dark mode and save to localStorage
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    localStorage.setItem("darkMode", newMode);
+    document.body.classList.toggle("dark-mode", newMode);
+  };
 
-    return (
-        <header className="header">
-            <h1 className="header-title">Note-Taking App</h1>
-            <nav>
-                <ul className="nav-list">
-                    <li><Link to="/home" className="nav-link">Home</Link></li>
-                    <li><Link to="/contact" className="nav-link">Contact Us</Link></li>
-                    <li><Link to="/help" className="nav-link">Help</Link></li>
-<<<<<<< HEAD
-                    <li><Link to="/Blog" className="nav-link">Notes</Link></li> {/* Ensure this matches the route in App.js */}
-=======
-                    <li><Link to="/blog" className="nav-link">Notes</Link></li>
->>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
-                    <li><Link to="/login" className="nav-link">Log In</Link></li>
-                    <li><Link to="/signup" className="nav-link">Sign Up</Link></li>
-                    <li>
-                        <button onClick={toggleDarkMode} className="nav-link mode-toggle">
-                            {darkMode ? 'Light Mode' : 'Dark Mode'}
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    );
+  return (
+    <header className="header">
+      <nav className="nav-container">
+        <ul className="nav-list">
+          <li>
+            <NavLink to="/home" className="nav-link" activeClassName="active">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              className="nav-link"
+              activeClassName="active"
+            >
+              Contact Us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/help" className="nav-link" activeClassName="active">
+              Help
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/blog" className="nav-link" activeClassName="active">
+              Notes
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+      <h1 className="header-title">Note-Taking App</h1>
+      <div className="right-menu">
+        <NavLink to="/login" className="nav-link" activeClassName="active">
+          Log In
+        </NavLink>
+        <NavLink to="/signup" className="nav-link" activeClassName="active">
+          Sign Up
+        </NavLink>
+        <button
+          onClick={toggleDarkMode}
+          className="mode-toggle"
+          aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+        >
+          {darkMode ? "Light Mode" : "Dark Mode"}
+        </button>
+      </div>
+    </header>
+  );
 };
 
 export default Header;

@@ -1,16 +1,12 @@
+
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-<<<<<<< HEAD
     padding: 0%;
     background-color: #f0f2f5;
+    padding-top: 10%;
 
-=======
-    padding: 0;
-    background-color: #f0f2f5;
-    padding-top: 70px;
->>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
 }
 
 /* Login Container */
@@ -19,14 +15,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-<<<<<<< HEAD
-    padding-top: 10%;
-=======
->>>>>>> 4589306ff834f2d61d6ed78cd20bb42bebf04387
 }
 
 /* Login Form */
-.login-form, .login-success, .forgot-password-form {
+.login-form,
+.login-success,
+.forgot-password-form {
     background-color: #fff;
     padding: 2rem;
     border-radius: 8px;
@@ -53,13 +47,15 @@ body {
 }
 
 /* Form Title */
-.login-form h1, .forgot-password-form h2 {
+.login-form h1,
+.forgot-password-form h2 {
     margin-bottom: 1.5rem;
     color: #333;
 }
 
 /* Form Labels */
-.login-form label, .forgot-password-form label {
+.login-form label,
+.forgot-password-form label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
@@ -67,7 +63,8 @@ body {
 }
 
 /* Form Inputs */
-.login-form input, .forgot-password-form input {
+.login-form input,
+.forgot-password-form input {
     width: calc(100% - 2rem);
     padding: 0.75rem;
     margin-bottom: 1rem;
@@ -77,7 +74,8 @@ body {
 }
 
 /* Form Button */
-.login-form button, .forgot-password-form button {
+.login-form button,
+.forgot-password-form button {
     width: 100%;
     padding: 0.75rem;
     background-color: #007bff;
@@ -88,26 +86,34 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.login-form button:hover, .forgot-password-form button:hover {
+.login-form button:hover,
+.forgot-password-form button:hover {
     background-color: #0056b3;
 }
 
 /* Links */
-.login-form .signup-link a, .forgot-password-form .cancel-link a {
+.login-form .signup-link a,
+.forgot-password-form .cancel-link a {
     color: #007bff;
     text-decoration: none;
 }
 
-.login-form .signup-link a:hover, .forgot-password-form .cancel-link a:hover {
+.login-form .signup-link a:hover,
+.forgot-password-form .cancel-link a:hover {
     text-decoration: underline;
 }
 
 .forgot-password-form {
-    display: block; /* Ensure it is displayed */
-    position: absolute; /* Positioned relative to parent */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for exact center */
+    display: block;
+    /* Ensure it is displayed */
+    position: absolute;
+    /* Positioned relative to parent */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjust for exact center */
     background-color: #fff;
     padding: 2rem;
     border-radius: 8px;
@@ -115,5 +121,6 @@ body {
     max-width: 400px;
     width: 100%;
     text-align: center;
-    z-index: 1000; /* Ensure it appears on top */
+    z-index: 1000;
+    /* Ensure it appears on top */
 }

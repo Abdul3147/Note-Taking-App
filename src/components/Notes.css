@@ -1,9 +1,10 @@
+
+/* General Blog Styling */
 .blog {
     max-width: 800px;
     margin: 0 auto;
     padding-top: 10%;
     color: black;
-    
 }
 
 .blog h1 {
@@ -24,7 +25,6 @@
     background-color: #007bff;
     color: rgb(16, 15, 15);
     cursor: pointer;
-    
 }
 
 .button-group button:hover {
@@ -64,13 +64,16 @@
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
     color: white;
     cursor: pointer;
 }
 
-.blog-post button:hover {
-    background-color: #51f217;
+.blog-post .edit {
+    background-color: green;
+}
+
+.blog-post .delete {
+    background-color: red;
 }
 
 .blog-form {
@@ -101,12 +104,4 @@
 
 .blog-form button:hover {
     background-color: #0cc32e;
-}
-
-edit {
-    background-color: green;
-}
-
-delete {
-    background-color: red;
 }
